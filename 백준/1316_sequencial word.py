@@ -1,14 +1,13 @@
-count_word = 0
-count = 0
-#N = int(input())
-word = list(input())
-seq_word = []
 
-for i in range(0, len(word)):
-    if i < int(len(word)):
-        if word[i] != word[i+1]:
-            seq_word.append(word[i])
-    else:
-        seq_word.append(word[i])
+case_num = int(input())
+answer = []
+for i in range(case_num):
+    word = list(str(input()))
 
-print(seq_word)
+    for k in range(len(word)):
+        if k != len(word) - 1 and word[k] == word[k + 1]:
+            pass
+        elif word[k + 1:].count(word[k]) != 0:
+            break
+        elif k == len(word) - 1:
+            answer.append(i)
