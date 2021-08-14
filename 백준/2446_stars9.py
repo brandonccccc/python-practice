@@ -1,6 +1,4 @@
 N = int(input())
-count = N - 1
-
 for i in range(1, 2*N):
     if i <= N:
         print(" "*(i-1) + "*"*(2*(N-i)+1))

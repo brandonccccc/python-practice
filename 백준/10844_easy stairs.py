@@ -12,4 +12,5 @@ for i in range(2,N+1):
             dp[i][j] = dp[i-1][8]
         else:
             dp[i][j] = dp[i-1][j-1] + dp[i-1][j+1]
+            
 print(sum(dp[N])%1000000000)

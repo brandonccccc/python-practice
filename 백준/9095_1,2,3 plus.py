@@ -1,7 +1,5 @@
 T = int(input())
 
-
-
 for j in range(T):
     n = int(input())
     d = [0, 1, 2, 4]

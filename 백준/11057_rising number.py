@@ -9,4 +9,4 @@ for i in range(2, N+1):
     for j in range(10):
         dp[i][j] = int(sum(dp[i-1][j::]))
         
-print(sum(dp[N])%1007)
+print(sum(dp[N])%10007)
