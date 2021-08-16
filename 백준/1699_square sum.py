@@ -1,11 +1,10 @@
 N = int(input())
-cnt = 0
-
-while 1:
-    a = int(N**(1/2))
-    if a**2 <= N < (a+1)**2:
-        N -= a**2
-        cnt += 1
-    if N == 0:
-        print(cnt)
-        break
+dp = [i for i in range(N+1)]
+for i in range(1, N+1):
+    for j in range(i):
+        if j*j > i:
+            break
+        if dp[i] > dp[i-j*j] + 1 :
+            dp[i] = dp[i-j*j] + 1
+print(dp)
+print(dp[N])
