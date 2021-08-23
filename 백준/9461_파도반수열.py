@@ -7,5 +7,4 @@ for _ in range(T):
     else:
         for i in range(10, N):
             dp.append(dp[i-1] + dp[i-5])
-        print(dp)
         print(dp[N-1])
