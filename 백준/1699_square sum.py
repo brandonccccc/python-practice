@@ -6,5 +6,4 @@ for i in range(1, N+1):
             break
         if dp[i] > dp[i-j*j] + 1 :
             dp[i] = dp[i-j*j] + 1
-print(dp)
 print(dp[N])
