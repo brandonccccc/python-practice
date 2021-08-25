@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-print("ㅁ")
-=======
 X = int(input())
 n = 1
 a, b = 0, 0
@@ -18,4 +15,4 @@ while 1:
     else:
         X -= n
         n += 1
->>>>>>> origin/master
+
