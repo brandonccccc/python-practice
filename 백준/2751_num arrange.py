@@ -1,7 +1,7 @@
 N = int(input())
-a = []
-for _ in range(N):
-    a.append(int(input()))
+a = [0] * N
+for i in range(N):
+    a[i] = int(input())
 a.sort()
 for i in range(N):
     print(a[i])
