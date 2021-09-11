@@ -1,28 +1,28 @@
 import sys
-S = list(sys.stdin.readline().rstrip())
+S1 = list(sys.stdin.readline().rstrip())
 N = int(sys.stdin.readline())
-cs = len(S)
+S2 = []
 for _ in range(N):
     command = sys.stdin.readline().split()
     if command[0] == 'D':
-        if cs == len(S):
-            cs = cs
+        if S2:
+            S1.append(S2.pop())
         else:
-            cs += 1
-    if command[0] == 'L':
-        if cs == 0:
-            cs = cs
+            continue
+    elif command[0] == 'L':
+        if S1:
+            S2.append(S1.pop())
         else:
-            cs -= 1
-    if command[0] == 'B':
-        if cs == 0:
-            pass
+            continue
+    elif command[0] == 'B':
+        if S1:
+            S1.pop()
         else:
-            del S[cs-1]
-            cs -= 1
-    if command[0] == 'P':
-        S.insert(cs, command[1])
-        cs += 1
+            continue
+    elif command[0] == 'P':
+        S1.append(command[1])
 
-S = ''.join(S) 
-sys.stdout.write(S)
+print(''.join(S1 + list(reversed(S2))))
+
+"""시간 복잡도 inset나 del은 O(n)이고
+append랑 pop이 O(1) 이다."""
