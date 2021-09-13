@@ -1,9 +1,12 @@
 T = int(input())
-num = list(map(int, input().split()))
-
-for _ in range(T):
-    a = int(input())
-    if a != 1 and a % 2 != 0 and a%3 != 0 and a%5 !=0 and a%7 != 0:
-        num.append(a)
-print(len(num))
+nums = list(map(int, input().split()))
+prime = 0
+for num in nums:
+    count = 0
+    for i in range(1, num+1):
+        if num % i == 0:
+            count += 1
+    if count == 2:
+        prime += 1
+print(prime)
 
