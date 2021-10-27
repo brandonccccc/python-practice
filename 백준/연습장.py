@@ -1,2 +1,3 @@
-a = str(12300)
-print(a[-1])
+list1 = []
+list1.append((str(1), 2))
+print(list1)
