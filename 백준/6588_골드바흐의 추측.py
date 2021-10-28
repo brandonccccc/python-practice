@@ -6,6 +6,7 @@ for i in range(2, int(r**0.5)+1):
         for j in range(i*2, r, i):
             if check[j] == True:
                 check[j] = False
+print(check)
 
 import sys
 
